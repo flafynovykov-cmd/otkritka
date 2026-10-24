@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Мир станет краше</title>
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Cormorant:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--fs:min(2.6vh,4.4vw);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden;overscroll-behavior:none;-webkit-text-size-adjust:100%;font-family:"Bad Script",Cormorant,Georgia,"Times New Roman",serif;font-style:normal;font-weight:400}
+main{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 22px;
+ background:linear-gradient(155deg,#7c3a41 0%,#6a2f38 45%,#2e141b 100%);color:#fff;font-size:var(--fs);line-height:1.35}
+p{margin:0 0 .8em;text-wrap:balance;max-width:640px;animation:up 1.2s ease both;animation-delay:var(--d,0s)}
+.low{margin-top:.4em}
+.paw{width:min(11vh,24vw);height:auto;fill:#150a0c;margin-top:1vh;animation:up 1.6s ease 4.8s both}
+@keyframes up{from{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <p style="--d:.2s">Мир станет краше с твоей улыбкой.</p>
+  <p style="--d:.6s">Мир станет лучше с твоим возвращением.</p>
+  <p style="--d:1s">Я верю в тебя и моё сердце плачет.<br>Плачет от счастья, что существует<br>Земля.</p>
+  <p style="--d:1.6s">Солнце спрячется за облаками,<br>На землю прольётся вода,</p>
+  <p style="--d:2.2s;margin-bottom:.2em">Всё заблестит</p>
+  <p class="low" style="--d:2.7s">под ярким светом мечты и веры.</p>
+  <p style="--d:3.3s">Твоё сердце горит пламенем,<br>Его не потушит никакой дождь.</p>
+  <p style="--d:3.9s">Твои слова оставляют след.</p>
+  <p style="--d:4.4s">След в моём сердце.</p>
+  <svg class="paw" viewBox="0 0 100 100" aria-label="Лапка"><g transform="rotate(8 50 55)"><path d="M50 44C63 44 75 57 81 71C85 82 80 93 69 93C62 93 58 89 50 89C42 89 38 93 31 93C20 93 15 82 19 71C25 57 37 44 50 44Z"/><ellipse cx="14" cy="52" rx="8.5" ry="12.5" transform="rotate(-30 14 52)"/><ellipse cx="35" cy="27" rx="10" ry="14.5" transform="rotate(-8 35 27)"/><ellipse cx="65" cy="27" rx="10" ry="14.5" transform="rotate(8 65 27)"/><ellipse cx="86" cy="52" rx="8.5" ry="12.5" transform="rotate(30 86 52)"/></g></svg>
+</main>
+<script>
+function fit(){var r=document.documentElement,m=document.querySelector('main'),fs=Math.min(innerHeight*.028,innerWidth*.052,26);
+r.style.setProperty('--fs',fs+'px');
+while(m.scrollHeight>m.clientHeight+16&&fs>8){fs-=.5;r.style.setProperty('--fs',fs+'px')}}
+fit();addEventListener('resize',fit);addEventListener('orientationchange',function(){setTimeout(fit,200)});
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+</script>
+</body>
+</html>
